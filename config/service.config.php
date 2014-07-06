@@ -3,15 +3,17 @@
 return array (
     'service_manager' => array(
         'aliases' => array(
-            'HeaderNavigation'  => 'Base\Navigation\Header',
-            'Log'               => 'Base\Log',
-            'Navigation'        => 'Base\Navigation',            
+            'error.handler'     => 'base.error.handler',
+            'header.navigation' => 'base.navigation.header',
+            'log'               => 'base.log',
+            'navigation'        => 'base.navigation',            
         ),
         'factories' => array(
-            'Base\Config'               => 'Chevignon\Base\Service\ConfigFactory',
-            'Base\Log'                  => 'Zend\Log\LoggerServiceFactory',
-            'Base\Navigation'           => 'Zend\Navigation\Service\DefaultNavigationFactory',
-            'Base\Navigation\Header'    => 'Chevignon\Base\Service\HeaderNavigationFactory',
+            'base.config'               => 'Chevignon\Base\Service\ConfigFactory',
+            'base.error.handler'        => 'Chevignon\Base\Service\ErrorHandler',
+            'base.log'                  => 'Zend\Log\LoggerServiceFactory',
+            'base.navigation'           => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            'base.navigation.header'    => 'Chevignon\Base\Service\HeaderNavigationFactory',
         ),
     ),
 );
