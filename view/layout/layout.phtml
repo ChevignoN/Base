@@ -1,0 +1,21 @@
+<?= $this->doctype(); ?>
+<html>
+   <head>
+       <?= $this->headTitle(); ?>
+       <?= $this->headMeta(); ?>
+       <?= $this->headLink(); ?>
+       <?= $this->headScript(); ?>
+   </head>
+   <body>
+       <div id="page-top">
+           <?= $this->partial('partial/header'); ?>
+           <?= $this->partial('partial/menu'); ?>
+           <?= $this->partial('partial/breadcrumbs'); ?>
+           <?= $this->partial('partial/message'); ?>
+           <div class="container"><?= $this->content; ?></div>
+       </div>
+       <div id="page-bottom">
+           <?= $this->partial('partial/footer'); ?>
+       </div>
+   </body>
+</html>
